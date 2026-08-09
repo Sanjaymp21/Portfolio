@@ -17,10 +17,11 @@ export function Navbar({ activeSection }) {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'What I Do', href: '#what-i-do' },
     { name: 'Skills', href: '#skills' },
     { name: 'Journey', href: '#journey' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Achievements', href: '#achievements' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'GitHub', href: '#github' },
     { name: 'Contact', href: '#contact' },
   ];

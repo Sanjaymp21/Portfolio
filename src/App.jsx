@@ -1,27 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useActiveSection } from './hooks/useActiveSection';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { WhatIDo } from './components/WhatIDo';
 import { Skills } from './components/Skills';
+import { CurrentlyFocusedOn } from './components/CurrentlyFocusedOn';
 import { Journey } from './components/Journey';
 import { Projects } from './components/Projects';
 import { ProjectModal } from './components/ProjectModal';
+import { Certifications } from './components/Certifications';
 import { EducationAchievements } from './components/EducationAchievements';
+import { LearningInsights } from './components/LearningInsights';
 import { GithubActivity } from './components/GithubActivity';
 import { ResumeCTA } from './components/ResumeCTA';
+import { CollaborationCTA } from './components/CollaborationCTA';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Toast } from './components/Toast';
+import { NotFound } from './components/NotFound';
 
 export function App() {
+  const [is404, setIs404] = useState(false);
+
+  // Check URL pathname for 404 testing or unknown path
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '' && !path.endsWith('index.html')) {
+      setIs404(true);
+    }
+  }, []);
+
   const activeSection = useActiveSection([
     'home',
     'about',
+    'what-i-do',
     'skills',
     'journey',
     'projects',
+    'certifications',
     'achievements',
     'github',
     'contact'
@@ -33,6 +51,17 @@ export function App() {
   const handleNotify = (msg) => {
     setToastMessage(msg);
   };
+
+  if (is404) {
+    return (
+      <NotFound 
+        onBackHome={() => {
+          window.history.pushState({}, '', '/');
+          setIs404(false);
+        }} 
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#070a13] text-slate-100 relative selection:bg-cyan-500 selection:text-black overflow-x-hidden">
@@ -53,12 +82,17 @@ export function App() {
         <main className="flex-grow">
           <Hero onNotify={handleNotify} />
           <About />
+          <WhatIDo />
           <Skills />
+          <CurrentlyFocusedOn />
           <Journey />
           <Projects onSelectProject={setSelectedProject} />
+          <Certifications />
           <EducationAchievements />
+          <LearningInsights />
           <GithubActivity />
           <ResumeCTA onNotify={handleNotify} />
+          <CollaborationCTA />
           <Contact onNotify={handleNotify} />
         </main>
 

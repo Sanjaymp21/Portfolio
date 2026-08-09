@@ -57,6 +57,99 @@ export const aboutData = {
   ]
 };
 
+export const whatIDoData = [
+  {
+    id: "software-dev",
+    title: "Software Development",
+    icon: "Code2",
+    description: "Building reliable and user-friendly software solutions using modern technologies.",
+    gradient: "from-cyan-500/20 to-blue-500/10",
+    badge: "Core Engineering"
+  },
+  {
+    id: "ai",
+    title: "Artificial Intelligence",
+    icon: "Cpu",
+    description: "Exploring AI and machine learning to create intelligent solutions for real-world problems.",
+    gradient: "from-purple-500/20 to-pink-500/10",
+    badge: "Intelligent Systems"
+  },
+  {
+    id: "full-stack",
+    title: "Full Stack Development",
+    icon: "Layers",
+    description: "Developing complete web applications with modern frontend and backend technologies.",
+    gradient: "from-blue-500/20 to-cyan-500/10",
+    badge: "Web Architecture"
+  },
+  {
+    id: "ui-ux",
+    title: "UI/UX Design",
+    icon: "Palette",
+    description: "Designing clean, intuitive, and engaging digital experiences.",
+    gradient: "from-emerald-500/20 to-teal-500/10",
+    badge: "User Experience"
+  }
+];
+
+export const currentlyFocusedOnData = [
+  {
+    title: "Full Stack Development",
+    emoji: "🚀",
+    description: "Developing robust, modern web architectures with React, Next.js, and backend microservices.",
+    category: "Full Stack"
+  },
+  {
+    title: "Artificial Intelligence",
+    emoji: "🤖",
+    description: "Exploring machine learning models, intelligent agent frameworks, and applied data solutions.",
+    category: "AI & ML"
+  },
+  {
+    title: "Cloud Technologies",
+    emoji: "☁️",
+    description: "Deepening cloud infrastructure knowledge, AWS services, containerization, and deployment pipelines.",
+    category: "Cloud"
+  },
+  {
+    title: "Software Engineering Practices",
+    emoji: "🏗️",
+    description: "Writing clean, maintainable code, test-driven methodologies, and scalable system design patterns.",
+    category: "Engineering"
+  }
+];
+
+export const learningInsightsData = [
+  {
+    title: "Exploring Full Stack Development",
+    topic: "Modern Web Architecture",
+    description: "Deep dive into reactive frontends, server-side data streaming, and scalable backend design.",
+    status: "Coming Soon",
+    icon: "Layers"
+  },
+  {
+    title: "Building AI-Based Applications",
+    topic: "Applied Artificial Intelligence",
+    description: "Practical workflows for integrating machine learning models into intuitive user applications.",
+    status: "Coming Soon",
+    icon: "Cpu"
+  },
+  {
+    title: "Improving Software Engineering Skills",
+    topic: "Engineering Mindset",
+    description: "Principles of writing clean, testable, and maintainable software with solid algorithms.",
+    status: "Coming Soon",
+    icon: "Code2"
+  },
+  {
+    title: "Understanding Modern Technologies",
+    topic: "Emerging Tech Paradigms",
+    description: "Analysis of next-generation tools, cloud computing scalability, and web standards.",
+    status: "Coming Soon",
+    icon: "Sparkles"
+  }
+];
+
 export const skillsData = [
   {
     category: "Programming Languages",
@@ -311,25 +404,31 @@ export const currentlyExploringData = [
 
 export const certificationsData = [
   {
-    title: "AWS Certification",
+    title: "AWS",
+    fullTitle: "AWS Cloud Fundamentals",
     issuer: "Amazon Web Services",
-    description: "Cloud fundamentals, cloud computing infrastructure, and core services architecture.",
-    tag: "Cloud Computing",
-    icon: "Cloud"
+    description: "Cloud fundamentals and AWS technology learning",
+    tag: "Cloud Infrastructure",
+    icon: "Cloud",
+    link: null // No fake links
   },
   {
-    title: "Python Certification",
+    title: "Python",
+    fullTitle: "Python Programming Specialization",
     issuer: "Professional Python",
-    description: "Programming paradigms, data structures, scripting, and problem-solving techniques.",
-    tag: "Programming",
-    icon: "Terminal"
+    description: "Programming and problem-solving certification",
+    tag: "Programming Logic",
+    icon: "Terminal",
+    link: null
   },
   {
-    title: "NPTEL Certification",
+    title: "NPTEL",
+    fullTitle: "NPTEL Technical Certification",
     issuer: "NPTEL / IIT",
-    description: "Rigorous academic curriculum and verified coursework in core computing disciplines.",
+    description: "Academic and technical learning certification",
     tag: "Academic Excellence",
-    icon: "Award"
+    icon: "Award",
+    link: null
   }
 ];
 
@@ -338,7 +437,7 @@ export const achievementsData = [
     id: "spl",
     title: "School SPL (Student Pupil Leader)",
     organization: "School Leadership",
-    description: "Served as School SPL, demonstrating strong leadership, responsibility, school-wide event coordination, and effective teamwork.",
+    description: "Demonstrated leadership, responsibility, coordination, and teamwork.",
     highlights: ["Leadership & Responsibility", "Event Coordination", "Teamwork & Mentorship"],
     icon: "ShieldCheck",
     category: "Leadership"
@@ -348,26 +447,26 @@ export const achievementsData = [
     title: "10th Standard Academic Distinction",
     organization: "Board Examination",
     score: "96%",
-    description: "Achieved outstanding academic results with a 96% score, reflecting solid dedication to fundamentals and discipline.",
+    description: "Scored 96% in 10th Standard, reflecting consistent academic dedication and strong fundamentals.",
     highlights: ["Top Percentile", "Strong Science & Math foundation"],
     icon: "Medal",
-    category: "Academic"
+    category: "Academic Achievement"
   },
   {
     id: "12th",
     title: "12th Standard Academic Distinction",
     organization: "Higher Secondary Board Examination",
     score: "90%",
-    description: "Secured 90% in Higher Secondary education with focus on Mathematics, Physics, and Computer Science streams.",
+    description: "Scored 90% in 12th Standard with focus on Mathematics, Physics, and Computer Science streams.",
     highlights: ["Academic Consistency", "High Performance"],
     icon: "Trophy",
-    category: "Academic"
+    category: "Academic Achievement"
   },
   {
     id: "certs",
     title: "Technical Certifications",
     organization: "AWS, Python, NPTEL",
-    description: "Earned recognized industry and academic certifications demonstrating continuous skill enhancement.",
+    description: "AWS, Python, and NPTEL certified in core computer science disciplines.",
     highlights: ["AWS Cloud", "Python Programming", "NPTEL Coursework"],
     icon: "CheckCircle2",
     category: "Certifications"
@@ -391,9 +490,10 @@ export const projectsData = [
     number: "01",
     title: "SST Groomers",
     category: "Pet Care",
-    shortDescription: "SST Groomers is a pet grooming trust and booking platform designed to help pet owners find grooming services and book appointments easily.",
-    problem: "Pet owners need a trusted way to find grooming services.",
-    solution: "A digital platform that improves transparency and appointment booking.",
+    shortDescription: "A digital pet grooming platform with service information and appointment booking.",
+    problem: "Pet owners need a trusted platform to discover grooming services.",
+    solution: "A digital pet grooming platform with service information and appointment booking.",
+    impact: "Improves trust and accessibility for local pet care services.",
     technologies: ["HTML", "CSS", "JavaScript", "UI/UX Design"],
     github: "https://github.com/Sanjaymp21",
     liveDemo: null,
@@ -402,9 +502,9 @@ export const projectsData = [
     gradientBorder: "border-amber-500/30 group-hover:border-amber-400/60",
     badgeColor: "bg-amber-500/10 text-amber-300 border-amber-500/20",
     keyPoints: [
-      "Intuitive pet care booking system with easy appointment scheduling",
-      "Grooming service directory with transparent package breakdowns",
-      "Responsive, clean UI crafted with human-centric UX principles"
+      "Building trust between pet owners and grooming services",
+      "Easy online appointment booking",
+      "Better digital experience for local pet grooming businesses"
     ]
   },
   {
@@ -412,9 +512,10 @@ export const projectsData = [
     number: "02",
     title: "PCDP V4",
     category: "Digital Management",
-    shortDescription: "PCDP V4 is a secure digital attendance management system designed to simplify attendance tracking and reduce manual record-keeping. It focuses on accuracy, security, and easy digital access.",
-    problem: "Manual attendance tracking is time-consuming.",
+    shortDescription: "A secure digital attendance management system simplifying tracking and reducing manual record-keeping.",
+    problem: "Manual attendance tracking is time-consuming and difficult to manage.",
     solution: "A secure digital attendance management system.",
+    impact: "Makes attendance tracking easier and more efficient.",
     technologies: ["Python", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Sanjaymp21",
     liveDemo: null,
@@ -433,9 +534,10 @@ export const projectsData = [
     number: "03",
     title: "Recyclo-AI",
     category: "Sustainability and AI",
-    shortDescription: "Recyclo-AI is an AI-powered e-waste management platform created to encourage responsible disposal and recycling of electronic waste.",
+    shortDescription: "An AI-powered e-waste management platform encouraging responsible electronic waste disposal.",
     problem: "Electronic waste disposal lacks awareness and proper guidance.",
-    solution: "An AI-powered platform for responsible e-waste management.",
+    solution: "An AI-powered e-waste management platform.",
+    impact: "Encourages responsible recycling practices.",
     technologies: ["Python", "AI", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Sanjaymp21",
     liveDemo: null,
@@ -454,9 +556,10 @@ export const projectsData = [
     number: "04",
     title: "EndoJourney AI",
     category: "Health Technology",
-    shortDescription: "EndoJourney AI is an AI-powered health companion designed to support people affected by endometriosis through a calm, accessible, and supportive digital experience.",
-    problem: "People affected by endometriosis need accessible support resources.",
+    shortDescription: "An AI-powered supportive health companion supporting people affected by endometriosis.",
+    problem: "People affected by endometriosis need accessible supportive resources.",
     solution: "An AI-powered supportive health companion.",
+    impact: "Provides educational and supportive digital assistance.",
     technologies: ["Python", "AI", "HTML", "CSS", "JavaScript", "UI/UX Design"],
     disclaimer: "This project is for educational and supportive purposes only. It does not replace professional medical advice, diagnosis, or treatment.",
     github: "https://github.com/Sanjaymp21",
@@ -475,39 +578,67 @@ export const projectsData = [
 
 export const githubShowcaseData = [
   {
-    name: "Portfolio",
-    description: "Modern, responsive personal developer portfolio website built with React, Vite, and Tailwind CSS.",
+    name: "SST-Groomers",
+    title: "SST Groomers",
+    category: "Pet Care Technology",
+    description: "Pet grooming trust and booking platform helping pet owners discover reliable services and book appointments easily.",
+    technologies: ["HTML", "CSS", "JavaScript", "UI/UX Design"],
+    highlights: [
+      "Building trust between pet owners and grooming services",
+      "Easy appointment booking",
+      "Better digital experience for local pet grooming businesses"
+    ],
     language: "JavaScript",
     languageColor: "#f7df1e",
-    url: "https://github.com/Sanjaymp21/Portfolio",
-    stars: "Active",
-    forks: "0"
-  },
-  {
-    name: "Recyclo-AI",
-    description: "AI-powered e-waste management platform encouraging responsible disposal and recycling.",
-    language: "Python",
-    languageColor: "#3572A5",
     url: "https://github.com/Sanjaymp21",
-    stars: "Active",
-    forks: "0"
-  },
-  {
-    name: "EndoJourney-AI",
-    description: "AI health companion supporting people affected by endometriosis with calm digital experiences.",
-    language: "Python",
-    languageColor: "#3572A5",
-    url: "https://github.com/Sanjaymp21",
-    stars: "Active",
-    forks: "0"
+    liveDemo: null
   },
   {
     name: "PCDP-V4",
-    description: "Secure digital attendance tracking and management system reducing manual record keeping.",
+    title: "PCDP V4",
+    category: "Digital Management",
+    description: "Secure digital attendance tracking and management system designed to simplify attendance tracking and reduce manual record-keeping.",
+    technologies: ["Python", "HTML", "CSS", "JavaScript"],
+    highlights: [
+      "Automated attendance verification",
+      "High accuracy record management",
+      "Intuitive student & admin portal"
+    ],
     language: "Python",
     languageColor: "#3572A5",
     url: "https://github.com/Sanjaymp21",
-    stars: "Active",
-    forks: "0"
+    liveDemo: null
+  },
+  {
+    name: "Recyclo-AI",
+    title: "Recyclo-AI",
+    category: "Sustainability & AI",
+    description: "AI-powered e-waste management platform created to encourage responsible disposal and recycling of electronic waste.",
+    technologies: ["Python", "AI", "HTML", "CSS", "JavaScript"],
+    highlights: [
+      "AI component categorization",
+      "Responsible disposal incentives",
+      "Eco awareness modules"
+    ],
+    language: "Python",
+    languageColor: "#3572A5",
+    url: "https://github.com/Sanjaymp21",
+    liveDemo: null
+  },
+  {
+    name: "Portfolio",
+    title: "Developer Portfolio",
+    category: "Web Engineering",
+    description: "Modern, responsive personal developer portfolio website built with React, Vite, and Tailwind CSS.",
+    technologies: ["React", "Vite", "Tailwind CSS"],
+    highlights: [
+      "Glassmorphic design system",
+      "Recruiter-focused project stories",
+      "Full responsive layout"
+    ],
+    language: "JavaScript",
+    languageColor: "#f7df1e",
+    url: "https://github.com/Sanjaymp21/Portfolio",
+    liveDemo: null
   }
 ];

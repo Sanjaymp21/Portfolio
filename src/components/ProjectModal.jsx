@@ -42,28 +42,44 @@ export function ProjectModal({ project, onClose }) {
             </p>
           </div>
 
-          {/* Problem & Solution Story */}
-          {project.problem && project.solution && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-slate-900/90 border border-rose-500/20 space-y-1.5">
-                <span className="text-xs font-mono text-rose-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-                  Real-World Problem
-                </span>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  {project.problem}
-                </p>
-              </div>
+          {/* Problem, Solution & Impact Story Framework */}
+          {(project.problem || project.solution || project.impact) && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {project.problem && (
+                <div className="p-4 rounded-xl bg-slate-900/90 border border-rose-500/20 space-y-1.5">
+                  <span className="text-xs font-mono text-rose-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                    Problem
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {project.problem}
+                  </p>
+                </div>
+              )}
 
-              <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 space-y-1.5">
-                <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-                  Implemented Solution
-                </span>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  {project.solution}
-                </p>
-              </div>
+              {project.solution && (
+                <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 space-y-1.5">
+                  <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    Solution
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                    {project.solution}
+                  </p>
+                </div>
+              )}
+
+              {project.impact && (
+                <div className="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30 space-y-1.5">
+                  <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    Impact
+                  </span>
+                  <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed">
+                    {project.impact}
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
