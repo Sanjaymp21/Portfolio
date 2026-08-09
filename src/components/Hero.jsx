@@ -18,6 +18,14 @@ export function Hero({ onNotify }) {
     }
   };
 
+  const handleScrollTo = (e, targetId) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section 
       id="home" 
@@ -91,7 +99,9 @@ export function Hero({ onNotify }) {
             {/* Primary: View My Projects */}
             <a
               href="#projects"
-              className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-400 hover:from-cyan-300 hover:to-blue-300 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm sm:text-base"
+              onClick={(e) => handleScrollTo(e, '#projects')}
+              aria-label="View My Projects"
+              className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-400 hover:from-cyan-300 hover:to-blue-300 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm sm:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400"
             >
               <span>View My Projects</span>
               <ArrowRight className="w-4 h-4" />
@@ -102,7 +112,8 @@ export function Hero({ onNotify }) {
               href={personalInfo.resumePath}
               download="Sanjay-M-Resume.pdf"
               onClick={handleResumeClick}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-slate-200 glass-card border border-white/10 hover:border-cyan-500/50 hover:text-white hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-black/20 hover:shadow-cyan-500/10 transition-all duration-200 text-sm sm:text-base"
+              aria-label="Download Sanjay M's Resume"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-slate-200 glass-card border border-white/10 hover:border-cyan-500/50 hover:text-white hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-black/20 hover:shadow-cyan-500/10 transition-all duration-200 text-sm sm:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400"
             >
               <FileDown className="w-4 h-4 text-cyan-400" />
               <span>Download Resume</span>
@@ -111,9 +122,11 @@ export function Hero({ onNotify }) {
             {/* Third: Contact Me */}
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-slate-300 hover:text-cyan-400 hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-200 text-sm sm:text-base"
+              onClick={(e) => handleScrollTo(e, '#contact')}
+              aria-label="Contact SANJAY M - Scroll to Contact Section"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-cyan-300 glass-card border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white shadow-md shadow-cyan-500/10 hover:shadow-cyan-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-sm sm:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4.5 h-4.5 text-cyan-400 group-hover:scale-110 transition-transform" />
               <span>Contact Me</span>
             </a>
           </div>
