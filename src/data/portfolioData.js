@@ -61,14 +61,14 @@ export const skillsData = [
   {
     category: "Programming Languages",
     shortTitle: "Languages",
-    description: "Core programming languages for algorithmic problem solving, scripting, and system logic.",
+    description: "Foundational programming languages for systems programming, data structures, and automation.",
     accentColor: "from-cyan-500/20 to-blue-500/10",
     borderColor: "hover:border-cyan-500/50",
     technologies: [
       {
         name: "C",
         iconKey: "c",
-        description: "Low-level systems programming, pointers & data structures",
+        description: "Low-level systems programming, memory management & algorithms",
         gradient: "from-blue-500/20 to-cyan-500/20",
         iconColor: "text-blue-400"
       },
@@ -78,101 +78,87 @@ export const skillsData = [
         description: "Programming, automation, scripting & data workflows",
         gradient: "from-amber-500/20 to-cyan-500/20",
         iconColor: "text-amber-300"
-      },
-      {
-        name: "JavaScript",
-        iconKey: "javascript",
-        description: "Modern ES6+ logic, asynchronous programming & web scripting",
-        gradient: "from-yellow-500/20 to-amber-500/20",
-        iconColor: "text-yellow-300"
-      },
-      {
-        name: "Go",
-        iconKey: "go",
-        description: "Concurrent systems, backend microservices & fast CLI tools",
-        gradient: "from-cyan-500/20 to-sky-500/20",
-        iconColor: "text-cyan-400"
       }
     ]
   },
   {
     category: "Frontend Development",
     shortTitle: "Frontend",
-    description: "Modern web tools and frameworks for creating responsive, accessible user interfaces.",
+    description: "Core client-side technologies for building responsive and accessible user interfaces.",
     accentColor: "from-blue-500/20 to-indigo-500/10",
     borderColor: "hover:border-blue-500/50",
     technologies: [
       {
         name: "HTML",
         iconKey: "html",
-        description: "Semantic web markup, SEO structure & web accessibility",
+        description: "Semantic structure for modern web pages",
         gradient: "from-orange-500/20 to-amber-500/20",
         iconColor: "text-orange-400"
       },
       {
         name: "CSS",
         iconKey: "css",
-        description: "Modern layouts, Flexbox, Grid, animations & responsive styling",
+        description: "Responsive layouts and visual styling",
         gradient: "from-blue-500/20 to-sky-500/20",
         iconColor: "text-blue-400"
       },
       {
         name: "JavaScript",
         iconKey: "javascript",
-        description: "DOM manipulation, event architectures & interactive browser UI",
+        description: "Interactive and dynamic web experiences",
         gradient: "from-yellow-500/20 to-amber-500/20",
         iconColor: "text-yellow-300"
       },
       {
         name: "React",
         iconKey: "react",
-        description: "Component-driven architecture, reactive state & hook workflows",
+        description: "Component-based frontend development",
         gradient: "from-cyan-500/20 to-blue-500/20",
         iconColor: "text-cyan-300"
-      },
-      {
-        name: "Next.js",
-        iconKey: "next.js",
-        description: "Server-side rendering, static generation & full-stack React routing",
-        gradient: "from-slate-500/20 to-cyan-500/20",
-        iconColor: "text-slate-200"
       }
     ]
   },
   {
-    category: "Backend & Server Technologies",
-    shortTitle: "Backend",
-    description: "Server-side runtimes, APIs, and frameworks for reliable digital services.",
+    category: "Full Stack / Backend Technologies",
+    shortTitle: "Full Stack & Backend",
+    description: "Frameworks, runtimes, and server technologies for scalable web applications and APIs.",
     accentColor: "from-emerald-500/20 to-teal-500/10",
     borderColor: "hover:border-emerald-500/50",
     technologies: [
       {
+        name: "Next.js",
+        iconKey: "next.js",
+        description: "React framework for full-stack applications, routing, and server-side rendering",
+        gradient: "from-slate-500/20 to-cyan-500/20",
+        iconColor: "text-slate-200"
+      },
+      {
         name: "Node.js",
         iconKey: "node.js",
-        description: "Scalable event-driven JavaScript server runtime & tooling",
+        description: "JavaScript runtime for scalable backend applications",
         gradient: "from-emerald-500/20 to-green-500/20",
         iconColor: "text-emerald-400"
       },
       {
         name: "Express.js",
         iconKey: "express.js",
-        description: "RESTful API development, request middleware & routing logic",
+        description: "Backend framework for APIs and server development",
         gradient: "from-slate-500/20 to-emerald-500/20",
         iconColor: "text-slate-300"
       },
       {
         name: "Go",
         iconKey: "go",
-        description: "High-performance backend servers, lightweight APIs & microservices",
+        description: "High-performance backend services and APIs",
         gradient: "from-cyan-500/20 to-teal-500/20",
         iconColor: "text-cyan-400"
       }
     ]
   },
   {
-    category: "AI & Emerging Technologies",
-    shortTitle: "AI & Emerging",
-    description: "Futuristic artificial intelligence and machine learning technologies.",
+    category: "AI & Technology",
+    shortTitle: "AI & Tech",
+    description: "Artificial intelligence concepts and machine learning implementations.",
     accentColor: "from-purple-500/20 to-pink-500/10",
     borderColor: "hover:border-purple-500/50",
     technologies: [
@@ -193,9 +179,9 @@ export const skillsData = [
     ]
   },
   {
-    category: "Design & Development Tools",
-    shortTitle: "Tools & Design",
-    description: "Essential workflow, version control, and design platforms for crafting products.",
+    category: "Design & Tools",
+    shortTitle: "Design & Tools",
+    description: "Design suites, version control systems, and modern developer environments.",
     accentColor: "from-cyan-500/20 to-indigo-500/10",
     borderColor: "hover:border-cyan-500/50",
     technologies: [

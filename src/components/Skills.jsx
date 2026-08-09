@@ -17,9 +17,9 @@ import { TechIcon } from './TechIcons';
 const categoryHeaderIcons = {
   "Programming Languages": Code2,
   "Frontend Development": Layout,
-  "Backend & Server Technologies": Server,
-  "AI & Emerging Technologies": Cpu,
-  "Design & Development Tools": Wrench
+  "Full Stack / Backend Technologies": Server,
+  "AI & Technology": Cpu,
+  "Design & Tools": Wrench
 };
 
 export function Skills() {
@@ -29,9 +29,9 @@ export function Skills() {
     'All',
     'Languages',
     'Frontend',
-    'Backend',
-    'AI & Emerging',
-    'Tools & Design'
+    'Full Stack & Backend',
+    'AI & Tech',
+    'Design & Tools'
   ];
 
   const displayedCategories = activeFilter === 'All'
