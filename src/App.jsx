@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useTheme } from './hooks/useTheme';
 import { useActiveSection } from './hooks/useActiveSection';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -15,7 +14,6 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { Toast } from './components/Toast';
 
 export function App() {
-  const { theme, toggleTheme, isDark } = useTheme();
   const activeSection = useActiveSection([
     'home',
     'about',
@@ -45,8 +43,6 @@ export function App() {
         {/* Navigation Bar */}
         <Navbar 
           activeSection={activeSection} 
-          theme={theme} 
-          toggleTheme={toggleTheme} 
         />
 
         {/* Main Content Sections */}

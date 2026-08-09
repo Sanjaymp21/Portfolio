@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, FileDown, ExternalLink, Code2 } from 'lucide-react';
+import { Menu, X, FileDown } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
-export function Navbar({ activeSection, theme, toggleTheme }) {
+export function Navbar({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -36,7 +36,7 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'py-3.5 glass-panel shadow-lg shadow-black/10' 
+          ? 'py-3.5 glass-panel shadow-lg shadow-black/30' 
           : 'py-5 bg-transparent'
       }`}
     >
@@ -52,7 +52,7 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
               SM
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg tracking-wider text-slate-100 dark:text-white group-hover:text-cyan-400 transition-colors">
+              <span className="font-bold text-lg tracking-wider text-white group-hover:text-cyan-400 transition-colors">
                 SANJAY M
               </span>
               <span className="text-[10px] uppercase tracking-widest text-cyan-400 font-mono">
@@ -62,7 +62,7 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-1.5 p-1.5 rounded-full glass-card border border-white/10 dark:border-white/5">
+          <nav className="hidden md:flex items-center gap-1.5 p-1.5 rounded-full glass-card border border-white/10">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.replace('#', '');
               return (
@@ -73,7 +73,7 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
                   className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 relative ${
                     isActive
                       ? 'text-cyan-400 bg-cyan-500/10 font-semibold shadow-sm'
-                      : 'text-slate-300 dark:text-slate-300 hover:text-white hover:bg-white/5'
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {link.name}
@@ -85,45 +85,20 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
             })}
           </nav>
 
-          {/* Action Buttons: Theme Toggle + Resume */}
+          {/* Action Button: Resume */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-              className="p-2.5 rounded-xl glass-card text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-amber-300 animate-spin-slow" />
-              ) : (
-                <Moon className="w-5 h-5 text-slate-700" />
-              )}
-            </button>
-
-            {/* Resume Button */}
             <a
               href={personalInfo.resumePath}
               download="Sanjay-M-Resume.pdf"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-900 bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               <FileDown className="w-4 h-4" />
               <span>Resume</span>
             </a>
           </div>
 
-          {/* Mobile Menu & Theme Toggle */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              className="p-2 rounded-lg glass-card text-slate-300 hover:text-cyan-400"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-amber-300" />
-              ) : (
-                <Moon className="w-5 h-5 text-slate-700" />
-              )}
-            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle navigation menu"
@@ -160,7 +135,7 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
               href={personalInfo.resumePath}
               download="Sanjay-M-Resume.pdf"
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-sm font-semibold text-slate-900 bg-gradient-to-r from-cyan-400 to-blue-400 shadow-md shadow-cyan-500/20"
+              className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-blue-400 shadow-md shadow-cyan-500/20"
             >
               <FileDown className="w-4 h-4" />
               <span>Download Resume</span>
