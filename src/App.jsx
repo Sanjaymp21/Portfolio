@@ -4,9 +4,11 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
+import { Journey } from './components/Journey';
 import { Projects } from './components/Projects';
 import { ProjectModal } from './components/ProjectModal';
 import { EducationAchievements } from './components/EducationAchievements';
+import { GithubActivity } from './components/GithubActivity';
 import { ResumeCTA } from './components/ResumeCTA';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -18,8 +20,10 @@ export function App() {
     'home',
     'about',
     'skills',
+    'journey',
     'projects',
     'achievements',
+    'github',
     'contact'
   ]);
 
@@ -50,8 +54,10 @@ export function App() {
           <Hero onNotify={handleNotify} />
           <About />
           <Skills />
+          <Journey />
           <Projects onSelectProject={setSelectedProject} />
           <EducationAchievements />
+          <GithubActivity />
           <ResumeCTA onNotify={handleNotify} />
           <Contact onNotify={handleNotify} />
         </main>

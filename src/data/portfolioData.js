@@ -231,30 +231,81 @@ export const skillsData = [
   }
 ];
 
+export const journeyData = [
+  {
+    year: "2025",
+    title: "Foundation & Problem Solving",
+    tag: "Milestone",
+    status: "Completed",
+    description: "Embarked on the software development journey with a deep dive into programming fundamentals and web architectures.",
+    points: [
+      "Started programming journey and established core logic in C and Python",
+      "Learned core data structures, algorithms, and computational problem solving",
+      "Explored foundational web technologies (HTML5, CSS3, JavaScript)"
+    ]
+  },
+  {
+    year: "2026",
+    title: "Hackathons & Impactful Building",
+    tag: "Active Phase",
+    status: "In Progress",
+    description: "Actively transforming ideas into full-stack applications, AI integrations, and participating in hackathon challenges.",
+    points: [
+      "Participated in innovation challenges and collaborative hackathons",
+      "Built projects using AI, web technologies, and software development (SST Groomers, PCDP V4, Recyclo-AI, EndoJourney AI)",
+      "Improved full-stack development skills across modern frontend and backend runtimes"
+    ]
+  },
+  {
+    year: "2027 - Future",
+    title: "Scalable Systems & Cloud Engineering",
+    tag: "Future Vision",
+    status: "Upcoming",
+    description: "Focusing on large-scale distributed architectures, cloud computing infrastructure, and impactful engineering leadership.",
+    points: [
+      "Explore advanced software engineering paradigms and system design",
+      "Learn cloud technologies, microservices, and scalable systems",
+      "Build impactful, production-grade real-world applications that solve societal challenges"
+    ]
+  }
+];
+
 export const currentlyExploringData = [
   {
     name: "Artificial Intelligence",
-    description: "Deep learning models, NLP, and intelligent agent integrations",
+    description: "Deep learning concepts, LLM architectures, and intelligent agent integrations",
     iconKey: "artificial intelligence",
-    tag: "AI Architecture"
+    tag: "AI Systems"
   },
   {
     name: "Machine Learning",
-    description: "Predictive analytics, data engineering, and model training pipelines",
+    description: "Predictive analytics, statistical models, and data-driven intelligence",
     iconKey: "machine learning",
     tag: "Data Science"
   },
   {
-    name: "Cloud Technologies",
-    description: "AWS cloud architecture, containerization, and serverless scaling",
+    name: "Cloud Computing",
+    description: "AWS cloud architecture, containerization, and serverless infrastructure",
     iconKey: "cloud",
-    tag: "Infrastructure"
+    tag: "Cloud & DevOps"
   },
   {
     name: "Advanced Full Stack Development",
-    description: "End-to-end full-stack architectures, Next.js 14+, and microservices",
+    description: "Full-stack Next.js applications, server components, and reactive architectures",
     iconKey: "react",
-    tag: "Modern Web"
+    tag: "Full Stack"
+  },
+  {
+    name: "Backend Architecture",
+    description: "High-throughput APIs, event-driven queues, and microservices patterns",
+    iconKey: "node.js",
+    tag: "Backend"
+  },
+  {
+    name: "System Design",
+    description: "Distributed caching, database partitioning, and high-availability design",
+    iconKey: "go",
+    tag: "Scalability"
   }
 ];
 
@@ -341,9 +392,11 @@ export const projectsData = [
     title: "SST Groomers",
     category: "Pet Care",
     shortDescription: "SST Groomers is a pet grooming trust and booking platform designed to help pet owners find grooming services and book appointments easily.",
+    problem: "Pet owners need a trusted way to find grooming services.",
+    solution: "A digital platform that improves transparency and appointment booking.",
     technologies: ["HTML", "CSS", "JavaScript", "UI/UX Design"],
     github: "https://github.com/Sanjaymp21",
-    liveDemo: null, // No fake demo link
+    liveDemo: null,
     status: "Coming Soon",
     visualTheme: "from-amber-500/20 via-cyan-500/10 to-blue-500/20",
     gradientBorder: "border-amber-500/30 group-hover:border-amber-400/60",
@@ -360,6 +413,8 @@ export const projectsData = [
     title: "PCDP V4",
     category: "Digital Management",
     shortDescription: "PCDP V4 is a secure digital attendance management system designed to simplify attendance tracking and reduce manual record-keeping. It focuses on accuracy, security, and easy digital access.",
+    problem: "Manual attendance tracking is time-consuming.",
+    solution: "A secure digital attendance management system.",
     technologies: ["Python", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Sanjaymp21",
     liveDemo: null,
@@ -379,6 +434,8 @@ export const projectsData = [
     title: "Recyclo-AI",
     category: "Sustainability and AI",
     shortDescription: "Recyclo-AI is an AI-powered e-waste management platform created to encourage responsible disposal and recycling of electronic waste.",
+    problem: "Electronic waste disposal lacks awareness and proper guidance.",
+    solution: "An AI-powered platform for responsible e-waste management.",
     technologies: ["Python", "AI", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Sanjaymp21",
     liveDemo: null,
@@ -398,6 +455,8 @@ export const projectsData = [
     title: "EndoJourney AI",
     category: "Health Technology",
     shortDescription: "EndoJourney AI is an AI-powered health companion designed to support people affected by endometriosis through a calm, accessible, and supportive digital experience.",
+    problem: "People affected by endometriosis need accessible support resources.",
+    solution: "An AI-powered supportive health companion.",
     technologies: ["Python", "AI", "HTML", "CSS", "JavaScript", "UI/UX Design"],
     disclaimer: "This project is for educational and supportive purposes only. It does not replace professional medical advice, diagnosis, or treatment.",
     github: "https://github.com/Sanjaymp21",
@@ -411,5 +470,44 @@ export const projectsData = [
       "AI companion providing supportive health insights & logging",
       "Comprehensive educational resources and support information"
     ]
+  }
+];
+
+export const githubShowcaseData = [
+  {
+    name: "Portfolio",
+    description: "Modern, responsive personal developer portfolio website built with React, Vite, and Tailwind CSS.",
+    language: "JavaScript",
+    languageColor: "#f7df1e",
+    url: "https://github.com/Sanjaymp21/Portfolio",
+    stars: "Active",
+    forks: "0"
+  },
+  {
+    name: "Recyclo-AI",
+    description: "AI-powered e-waste management platform encouraging responsible disposal and recycling.",
+    language: "Python",
+    languageColor: "#3572A5",
+    url: "https://github.com/Sanjaymp21",
+    stars: "Active",
+    forks: "0"
+  },
+  {
+    name: "EndoJourney-AI",
+    description: "AI health companion supporting people affected by endometriosis with calm digital experiences.",
+    language: "Python",
+    languageColor: "#3572A5",
+    url: "https://github.com/Sanjaymp21",
+    stars: "Active",
+    forks: "0"
+  },
+  {
+    name: "PCDP-V4",
+    description: "Secure digital attendance tracking and management system reducing manual record keeping.",
+    language: "Python",
+    languageColor: "#3572A5",
+    url: "https://github.com/Sanjaymp21",
+    stars: "Active",
+    forks: "0"
   }
 ];

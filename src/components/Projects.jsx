@@ -106,6 +106,27 @@ export function Projects({ onSelectProject }) {
                     {project.shortDescription}
                   </p>
 
+                  {/* Problem & Solution Story Highlights */}
+                  {project.problem && project.solution && (
+                    <div className="space-y-2 pt-1">
+                      <div className="p-3 rounded-xl bg-slate-900/80 border border-white/5 space-y-1 text-xs">
+                        <div className="flex items-center gap-1.5 font-mono text-rose-400 font-semibold">
+                          <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                          <span>Problem:</span>
+                        </div>
+                        <p className="text-slate-300 pl-3 leading-relaxed">{project.problem}</p>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/20 space-y-1 text-xs">
+                        <div className="flex items-center gap-1.5 font-mono text-cyan-400 font-semibold">
+                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                          <span>Solution:</span>
+                        </div>
+                        <p className="text-slate-200 pl-3 leading-relaxed">{project.solution}</p>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Optional Disclaimer Preview */}
                   {project.disclaimer && (
                     <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-200 text-xs flex items-start gap-2">

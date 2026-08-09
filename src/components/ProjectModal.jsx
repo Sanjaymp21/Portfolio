@@ -42,6 +42,31 @@ export function ProjectModal({ project, onClose }) {
             </p>
           </div>
 
+          {/* Problem & Solution Story */}
+          {project.problem && project.solution && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl bg-slate-900/90 border border-rose-500/20 space-y-1.5">
+                <span className="text-xs font-mono text-rose-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                  Real-World Problem
+                </span>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  {project.problem}
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 space-y-1.5">
+                <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  Implemented Solution
+                </span>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  {project.solution}
+                </p>
+              </div>
+            </div>
+          )}
+
           {/* Medical / Educational Disclaimer (if applicable) */}
           {project.disclaimer && (
             <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs sm:text-sm flex items-start gap-3">

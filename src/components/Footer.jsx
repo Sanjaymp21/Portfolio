@@ -12,17 +12,20 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           
           {/* Logo & Subtitle */}
-          <div className="space-y-1">
+          <div className="space-y-1.5">
             <div className="flex items-center justify-center md:justify-start gap-2">
               <span className="font-extrabold text-lg tracking-wider text-white">
                 SANJAY M
               </span>
               <span className="text-xs font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                IT Student
+                IT Developer
               </span>
             </div>
-            <p className="text-xs text-slate-400">
-              Designed and built by SANJAY M
+            <p className="text-xs font-medium text-slate-300">
+              Designed & Engineered by SANJAY M
+            </p>
+            <p className="text-[11px] text-cyan-400/90 font-mono">
+              Building ideas into digital experiences.
             </p>
           </div>
 

@@ -18,8 +18,10 @@ export function Navbar({ activeSection }) {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Journey', href: '#journey' },
     { name: 'Projects', href: '#projects' },
     { name: 'Achievements', href: '#achievements' },
+    { name: 'GitHub', href: '#github' },
     { name: 'Contact', href: '#contact' },
   ];
 
