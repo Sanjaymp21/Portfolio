@@ -59,30 +59,216 @@ export const aboutData = {
 
 export const skillsData = [
   {
-    category: "Programming",
-    description: "Core languages for logic, problem solving, and backend automation",
-    skills: [
-      { name: "C", level: "Core Logic", icon: "FileCode", tag: "System & Algorithms" },
-      { name: "Python", level: "Scripting & AI", icon: "Terminal", tag: "Data & Automation" },
-      { name: "JavaScript", level: "ES6+ Logic", icon: "Braces", tag: "Web & Dynamic" }
+    category: "Programming Languages",
+    shortTitle: "Languages",
+    description: "Core programming languages for algorithmic problem solving, scripting, and system logic.",
+    accentColor: "from-cyan-500/20 to-blue-500/10",
+    borderColor: "hover:border-cyan-500/50",
+    technologies: [
+      {
+        name: "C",
+        iconKey: "c",
+        description: "Low-level systems programming, pointers & data structures",
+        gradient: "from-blue-500/20 to-cyan-500/20",
+        iconColor: "text-blue-400"
+      },
+      {
+        name: "Python",
+        iconKey: "python",
+        description: "Programming, automation, scripting & data workflows",
+        gradient: "from-amber-500/20 to-cyan-500/20",
+        iconColor: "text-amber-300"
+      },
+      {
+        name: "JavaScript",
+        iconKey: "javascript",
+        description: "Modern ES6+ logic, asynchronous programming & web scripting",
+        gradient: "from-yellow-500/20 to-amber-500/20",
+        iconColor: "text-yellow-300"
+      },
+      {
+        name: "Go",
+        iconKey: "go",
+        description: "Concurrent systems, backend microservices & fast CLI tools",
+        gradient: "from-cyan-500/20 to-sky-500/20",
+        iconColor: "text-cyan-400"
+      }
     ]
   },
   {
-    category: "Web Development",
-    description: "Modern frontend technologies for building responsive web interfaces",
-    skills: [
-      { name: "HTML", level: "Semantic Markup", icon: "Layout", tag: "Structure & SEO" },
-      { name: "CSS", level: "Modern Layouts", icon: "Paintbrush", tag: "Styling & Responsive" },
-      { name: "JavaScript", level: "DOM & Interaction", icon: "Sparkles", tag: "Interactive UI" }
+    category: "Frontend Development",
+    shortTitle: "Frontend",
+    description: "Modern web tools and frameworks for creating responsive, accessible user interfaces.",
+    accentColor: "from-blue-500/20 to-indigo-500/10",
+    borderColor: "hover:border-blue-500/50",
+    technologies: [
+      {
+        name: "HTML",
+        iconKey: "html",
+        description: "Semantic web markup, SEO structure & web accessibility",
+        gradient: "from-orange-500/20 to-amber-500/20",
+        iconColor: "text-orange-400"
+      },
+      {
+        name: "CSS",
+        iconKey: "css",
+        description: "Modern layouts, Flexbox, Grid, animations & responsive styling",
+        gradient: "from-blue-500/20 to-sky-500/20",
+        iconColor: "text-blue-400"
+      },
+      {
+        name: "JavaScript",
+        iconKey: "javascript",
+        description: "DOM manipulation, event architectures & interactive browser UI",
+        gradient: "from-yellow-500/20 to-amber-500/20",
+        iconColor: "text-yellow-300"
+      },
+      {
+        name: "React",
+        iconKey: "react",
+        description: "Component-driven architecture, reactive state & hook workflows",
+        gradient: "from-cyan-500/20 to-blue-500/20",
+        iconColor: "text-cyan-300"
+      },
+      {
+        name: "Next.js",
+        iconKey: "next.js",
+        description: "Server-side rendering, static generation & full-stack React routing",
+        gradient: "from-slate-500/20 to-cyan-500/20",
+        iconColor: "text-slate-200"
+      }
     ]
   },
   {
-    category: "Design",
-    description: "Visual design tools and user experience methodologies",
-    skills: [
-      { name: "UI/UX Design", level: "Wireframing & Prototyping", icon: "PenTool", tag: "User Experience" },
-      { name: "Canva Design", level: "Visual Assets & Branding", icon: "Layers", tag: "Graphics & Media" }
+    category: "Backend & Server Technologies",
+    shortTitle: "Backend",
+    description: "Server-side runtimes, APIs, and frameworks for reliable digital services.",
+    accentColor: "from-emerald-500/20 to-teal-500/10",
+    borderColor: "hover:border-emerald-500/50",
+    technologies: [
+      {
+        name: "Node.js",
+        iconKey: "node.js",
+        description: "Scalable event-driven JavaScript server runtime & tooling",
+        gradient: "from-emerald-500/20 to-green-500/20",
+        iconColor: "text-emerald-400"
+      },
+      {
+        name: "Express.js",
+        iconKey: "express.js",
+        description: "RESTful API development, request middleware & routing logic",
+        gradient: "from-slate-500/20 to-emerald-500/20",
+        iconColor: "text-slate-300"
+      },
+      {
+        name: "Go",
+        iconKey: "go",
+        description: "High-performance backend servers, lightweight APIs & microservices",
+        gradient: "from-cyan-500/20 to-teal-500/20",
+        iconColor: "text-cyan-400"
+      }
     ]
+  },
+  {
+    category: "AI & Emerging Technologies",
+    shortTitle: "AI & Emerging",
+    description: "Futuristic artificial intelligence and machine learning technologies.",
+    accentColor: "from-purple-500/20 to-pink-500/10",
+    borderColor: "hover:border-purple-500/50",
+    technologies: [
+      {
+        name: "Artificial Intelligence",
+        iconKey: "artificial intelligence",
+        description: "Intelligent systems, neural concepts & automated solution workflows",
+        gradient: "from-purple-500/20 to-cyan-500/20",
+        iconColor: "text-purple-300"
+      },
+      {
+        name: "Machine Learning",
+        iconKey: "machine learning",
+        description: "Data modeling, pattern recognition & predictive algorithms",
+        gradient: "from-pink-500/20 to-purple-500/20",
+        iconColor: "text-pink-300"
+      }
+    ]
+  },
+  {
+    category: "Design & Development Tools",
+    shortTitle: "Tools & Design",
+    description: "Essential workflow, version control, and design platforms for crafting products.",
+    accentColor: "from-cyan-500/20 to-indigo-500/10",
+    borderColor: "hover:border-cyan-500/50",
+    technologies: [
+      {
+        name: "UI/UX Design",
+        iconKey: "ui/ux design",
+        description: "User journey mapping, wireframing & intuitive interface design",
+        gradient: "from-cyan-500/20 to-blue-500/20",
+        iconColor: "text-cyan-400"
+      },
+      {
+        name: "Canva Design",
+        iconKey: "canva design",
+        description: "Visual assets, multimedia presentation & graphic design branding",
+        gradient: "from-blue-500/20 to-cyan-500/20",
+        iconColor: "text-blue-400"
+      },
+      {
+        name: "Git",
+        iconKey: "git",
+        description: "Distributed version control, branching & repository management",
+        gradient: "from-orange-500/20 to-red-500/20",
+        iconColor: "text-orange-400"
+      },
+      {
+        name: "GitHub",
+        iconKey: "github",
+        description: "Collaborative code hosting, pull requests & open-source workflow",
+        gradient: "from-slate-500/20 to-slate-700/20",
+        iconColor: "text-slate-200"
+      },
+      {
+        name: "VS Code",
+        iconKey: "vs code",
+        description: "Primary development IDE, debugging & extension environment",
+        gradient: "from-blue-500/20 to-indigo-500/20",
+        iconColor: "text-blue-400"
+      },
+      {
+        name: "Figma",
+        iconKey: "figma",
+        description: "Collaborative interface prototyping, design systems & mockups",
+        gradient: "from-pink-500/20 to-purple-500/20",
+        iconColor: "text-pink-400"
+      }
+    ]
+  }
+];
+
+export const currentlyExploringData = [
+  {
+    name: "Artificial Intelligence",
+    description: "Deep learning models, NLP, and intelligent agent integrations",
+    iconKey: "artificial intelligence",
+    tag: "AI Architecture"
+  },
+  {
+    name: "Machine Learning",
+    description: "Predictive analytics, data engineering, and model training pipelines",
+    iconKey: "machine learning",
+    tag: "Data Science"
+  },
+  {
+    name: "Cloud Technologies",
+    description: "AWS cloud architecture, containerization, and serverless scaling",
+    iconKey: "cloud",
+    tag: "Infrastructure"
+  },
+  {
+    name: "Advanced Full Stack Development",
+    description: "End-to-end full-stack architectures, Next.js 14+, and microservices",
+    iconKey: "react",
+    tag: "Modern Web"
   }
 ];
 
