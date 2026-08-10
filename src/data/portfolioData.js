@@ -449,7 +449,7 @@ export const achievementsData = [
   {
     id: "spl",
     title: "School SPL (Student Pupil Leader)",
-    organization: "School Leadership",
+    organization: "Student Council Leadership",
     description: "Demonstrated leadership, responsibility, coordination, and teamwork.",
     highlights: ["Leadership & Responsibility", "Event Coordination", "Teamwork & Mentorship"],
     icon: "ShieldCheck",
@@ -457,32 +457,23 @@ export const achievementsData = [
   },
   {
     id: "10th",
-    title: "10th Standard Academic Distinction",
+    title: "10th Standard Academic Achievement",
     organization: "Board Examination",
     score: "96%",
-    description: "Scored 96% in 10th Standard, reflecting consistent academic dedication and strong fundamentals.",
-    highlights: ["Top Percentile", "Strong Science & Math foundation"],
-    icon: "Medal",
-    category: "Academic Achievement"
-  },
-  {
-    id: "12th",
-    title: "12th Standard Academic Distinction",
-    organization: "Higher Secondary Board Examination",
-    score: "90%",
-    description: "Scored 90% in 12th Standard with focus on Mathematics, Physics, and Computer Science streams.",
-    highlights: ["Academic Consistency", "High Performance"],
+    description: "Scored 96% in 10th Standard, reflecting consistent academic dedication and strong analytical fundamentals.",
+    highlights: ["Academic Distinction", "Strong Foundations"],
     icon: "Trophy",
     category: "Academic Achievement"
   },
   {
-    id: "certs",
-    title: "Technical Certifications",
-    organization: "AWS, Python, NPTEL",
-    description: "AWS, Python, and NPTEL certified in core computer science disciplines.",
-    highlights: ["AWS Cloud", "Python Programming", "NPTEL Coursework"],
-    icon: "CheckCircle2",
-    category: "Certifications"
+    id: "12th",
+    title: "12th Standard Academic Achievement",
+    organization: "Higher Secondary Board",
+    score: "90%",
+    description: "Scored 90% in 12th Standard with focus on Mathematics, Physics, and Computer Science.",
+    highlights: ["Academic Distinction", "High Performance"],
+    icon: "Award",
+    category: "Academic Achievement"
   }
 ];
 
