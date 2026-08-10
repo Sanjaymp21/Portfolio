@@ -56,8 +56,8 @@ export function Projects({ onSelectProject }) {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${selectedCategory === cat
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 scale-105'
-                  : 'glass-card text-slate-300 hover:text-white hover:border-cyan-500/30'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 scale-105'
+                : 'glass-card text-slate-300 hover:text-white hover:border-cyan-500/30'
                 }`}
             >
               {cat}

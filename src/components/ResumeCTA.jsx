@@ -13,9 +13,9 @@ export function ResumeCTA({ onNotify }) {
     <section id="resume" className="py-20 lg:py-28 relative">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-      
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -26,7 +26,7 @@ export function ResumeCTA({ onNotify }) {
             Want to know more about my <span className="text-gradient">skills and experience?</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Get an in-depth view of my technical projects, computer science coursework, 
+            Get an in-depth view of my technical projects, computer science coursework,
             certifications, and academic history.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
@@ -34,7 +34,7 @@ export function ResumeCTA({ onNotify }) {
 
         {/* Resume Interactive Preview Card Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Left: Interactive Resume Document Mockup Preview */}
           <div className="lg:col-span-6 glass-panel rounded-2xl border border-cyan-500/30 p-6 sm:p-7 space-y-5 shadow-2xl relative group overflow-hidden">
             {/* Header snippet */}

@@ -12,17 +12,17 @@ export function CollaborationCTA() {
   return (
     <section className="py-16 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Large Premium CTA Card */}
         <div className="relative rounded-3xl p-8 sm:p-14 overflow-hidden border border-cyan-500/30 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-slate-900/90 shadow-2xl shadow-cyan-500/10">
-          
+
           {/* Background glowing orbs */}
           <div className="absolute -top-24 -left-24 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
 
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
-            
+
             {/* Small Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-xs font-semibold uppercase tracking-wider text-cyan-400">
               <Handshake className="w-4 h-4" />

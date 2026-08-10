@@ -1,9 +1,9 @@
 import React from 'react';
-import { 
-  Milestone, 
-  CheckCircle2, 
-  Sparkles, 
-  Rocket, 
+import {
+  Milestone,
+  CheckCircle2,
+  Sparkles,
+  Rocket,
   Compass,
   Code2,
   Globe,
@@ -34,7 +34,7 @@ export function Journey() {
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -52,7 +52,7 @@ export function Journey() {
 
         {/* Vertical Timeline Container */}
         <div className="relative max-w-4xl mx-auto">
-          
+
           {/* Central Vertical Glowing Line */}
           <div className="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-cyan-500/60 via-blue-500/50 to-cyan-500/20 sm:-translate-x-1/2 shadow-[0_0_12px_rgba(6,182,212,0.3)]"></div>
 
@@ -65,9 +65,8 @@ export function Journey() {
               return (
                 <div
                   key={item.title}
-                  className={`relative flex flex-col sm:flex-row items-start ${
-                    isEven ? 'sm:flex-row-reverse' : ''
-                  } gap-6 sm:gap-12 group`}
+                  className={`relative flex flex-col sm:flex-row items-start ${isEven ? 'sm:flex-row-reverse' : ''
+                    } gap-6 sm:gap-12 group`}
                 >
                   {/* Timeline Center Node Dot */}
                   <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-6 w-10 h-10 rounded-full bg-slate-950 border-2 border-cyan-400/80 flex items-center justify-center text-cyan-300 shadow-[0_0_18px_rgba(6,182,212,0.35)] group-hover:scale-125 group-hover:border-cyan-300 group-hover:bg-cyan-950/90 group-hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all duration-300 z-20">
@@ -76,10 +75,9 @@ export function Journey() {
 
                   {/* Card Container (Half-width on desktop) */}
                   <div className="w-full sm:w-1/2 pl-12 sm:pl-0">
-                    <div className={`glass-card p-6 sm:p-7 rounded-2xl border border-white/10 hover:border-cyan-500/40 group-hover:shadow-2xl group-hover:shadow-cyan-500/10 transition-all duration-300 group-hover:-translate-y-1 ${
-                      isEven ? 'sm:mr-6' : 'sm:ml-6'
-                    }`}>
-                      
+                    <div className={`glass-card p-6 sm:p-7 rounded-2xl border border-white/10 hover:border-cyan-500/40 group-hover:shadow-2xl group-hover:shadow-cyan-500/10 transition-all duration-300 group-hover:-translate-y-1 ${isEven ? 'sm:mr-6' : 'sm:ml-6'
+                      }`}>
+
                       {/* Year & Category Badge */}
                       <div className="flex items-center justify-between gap-3 mb-3">
                         <span className="text-xl sm:text-2xl font-black font-mono text-cyan-400 tracking-wider">

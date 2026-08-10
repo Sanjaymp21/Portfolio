@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  Code2, 
-  Layout, 
-  Server, 
-  Cpu, 
-  Wrench, 
-  Sparkles, 
-  Compass, 
+import {
+  Code2,
+  Layout,
+  Server,
+  Cpu,
+  Wrench,
+  Sparkles,
+  Compass,
   ArrowUpRight,
   Zap,
   CheckCircle2
@@ -45,22 +45,22 @@ export function Skills() {
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold uppercase tracking-wider text-cyan-400">
             <Zap className="w-3.5 h-3.5" />
             <span>Technology Stack</span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Technologies I <span className="text-gradient">Work With</span>
           </h2>
-          
+
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             A collection of languages, frameworks, tools, and technologies I use to build digital solutions.
           </p>
-          
+
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mt-2"></div>
         </div>
 
@@ -70,11 +70,10 @@ export function Skills() {
             <button
               key={option}
               onClick={() => setActiveFilter(option)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${
-                activeFilter === option
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${activeFilter === option
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 scale-105'
                   : 'glass-card text-slate-300 hover:text-white hover:border-cyan-500/30'
-              }`}
+                }`}
             >
               {option}
             </button>
@@ -88,7 +87,7 @@ export function Skills() {
 
             return (
               <div key={group.category} className="space-y-6">
-                
+
                 {/* Category Header Bar */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
                   <div className="flex items-center gap-3">
@@ -159,12 +158,12 @@ export function Skills() {
         {/* Highlighted Section: "Currently Exploring" */}
         <div className="mt-20 lg:mt-28">
           <div className="glass-panel p-6 sm:p-10 rounded-3xl border border-cyan-500/30 relative overflow-hidden shadow-2xl">
-            
+
             {/* Ambient Background Gradient for the Exploring Box */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-cyan-500/15 via-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-            
+
             <div className="relative z-10 space-y-8">
-              
+
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1.5">

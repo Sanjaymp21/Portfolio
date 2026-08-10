@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useActiveSection } from './hooks/useActiveSection';
+import { AnimatedBackground } from './components/AnimatedBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -54,28 +55,24 @@ export function App() {
 
   if (is404) {
     return (
-      <NotFound 
+      <NotFound
         onBackHome={() => {
           window.history.pushState({}, '', '/');
           setIs404(false);
-        }} 
+        }}
       />
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#070a13] text-slate-100 relative selection:bg-cyan-500 selection:text-black overflow-x-hidden">
-      {/* Background Cyber Mesh Grid Pattern */}
-      <div className="fixed inset-0 bg-grid-pattern pointer-events-none opacity-40 z-0"></div>
-      
-      {/* Background Ambient Color Spots */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
-      <div className="fixed bottom-0 right-0 w-[600px] h-[500px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+    <div className="min-h-screen bg-[#03050c] text-slate-100 relative selection:bg-cyan-500 selection:text-black overflow-x-hidden">
+      {/* High-End Immersive AI Developer Digital Universe Background */}
+      <AnimatedBackground activeSection={activeSection} />
 
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Navigation Bar */}
-        <Navbar 
-          activeSection={activeSection} 
+        <Navbar
+          activeSection={activeSection}
         />
 
         {/* Main Content Sections */}
@@ -101,7 +98,7 @@ export function App() {
 
         {/* Floating Utilities */}
         <ScrollToTop />
-        
+
         {/* Project Detail Modal */}
         {selectedProject && (
           <ProjectModal

@@ -36,18 +36,17 @@ export function Navbar({ activeSection }) {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled 
-          ? 'py-3.5 glass-panel shadow-lg shadow-black/30' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+          ? 'py-3.5 glass-panel shadow-lg shadow-black/30'
           : 'py-5 bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a 
-            href="#home" 
+          <a
+            href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
             className="group flex items-center gap-2.5 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-lg p-1"
           >
@@ -73,11 +72,10 @@ export function Navbar({ activeSection }) {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 relative ${
-                    isActive
+                  className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 relative ${isActive
                       ? 'text-cyan-400 bg-cyan-500/10 font-semibold shadow-sm'
                       : 'text-slate-300 hover:text-white hover:bg-white/5'
-                  }`}
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -123,11 +121,10 @@ export function Navbar({ activeSection }) {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`block px-4 py-2.5 rounded-xl text-base font-medium transition-colors ${
-                  isActive
+                className={`block px-4 py-2.5 rounded-xl text-base font-medium transition-colors ${isActive
                     ? 'bg-cyan-500/15 text-cyan-400 font-semibold'
                     : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                }`}
+                  }`}
               >
                 {link.name}
               </a>

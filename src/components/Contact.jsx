@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  Mail, 
-  Send, 
-  Copy, 
-  Check, 
-  ExternalLink, 
+import {
+  Mail,
+  Send,
+  Copy,
+  Check,
+  ExternalLink,
   Sparkles,
   MapPin,
   Clock,
@@ -31,7 +31,7 @@ export function Contact({ onNotify }) {
       <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -49,7 +49,7 @@ export function Contact({ onNotify }) {
 
         {/* Contact Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-          
+
           {/* Email Card */}
           <div className="glass-card p-6 sm:p-7 rounded-2xl border border-white/10 hover:border-cyan-500/50 relative flex flex-col justify-between group">
             <div className="space-y-4">

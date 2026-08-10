@@ -1,9 +1,9 @@
 import React from 'react';
-import { 
-  GraduationCap, 
-  Award, 
-  Trophy, 
-  ShieldCheck, 
+import {
+  GraduationCap,
+  Award,
+  Trophy,
+  ShieldCheck,
   Calendar,
   MapPin,
   Sparkles,
@@ -26,7 +26,7 @@ export function EducationAchievements() {
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -49,7 +49,7 @@ export function EducationAchievements() {
             <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
+
               {/* College Info */}
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-3.5">
@@ -129,14 +129,13 @@ export function EducationAchievements() {
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-transform group-hover:scale-110 ${
-                        isSPL 
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-transform group-hover:scale-110 ${isSPL
                           ? 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.2)]'
                           : 'bg-amber-500/15 text-amber-400 border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
-                      }`}>
+                        }`}>
                         <Icon className="w-6 h-6" />
                       </div>
-                      
+
                       {ach.score ? (
                         <span className="text-base font-black font-mono px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                           {ach.score}

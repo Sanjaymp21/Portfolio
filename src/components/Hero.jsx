@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  FileDown, 
-  Mail, 
-  Sparkles, 
-  GraduationCap, 
-  Calendar, 
+import {
+  ArrowRight,
+  FileDown,
+  Mail,
+  Sparkles,
+  GraduationCap,
+  Calendar,
   MapPin,
   Code2
 } from 'lucide-react';
@@ -27,8 +27,8 @@ export function Hero({ onNotify }) {
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-[92vh] pt-32 pb-20 lg:pt-40 lg:pb-28 flex items-center overflow-hidden"
     >
       {/* Background Soft Glowing Ambient Gradients */}
@@ -44,7 +44,7 @@ export function Hero({ onNotify }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-4xl space-y-7 text-left">
-          
+
           {/* Badges: Status + Subtitle */}
           <div className="flex flex-wrap items-center gap-3">
             {/* Status Badge */}

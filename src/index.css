@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-[#070a13] text-slate-100 min-h-screen antialiased overflow-x-hidden;
+    @apply bg-[#050816] text-slate-100 min-h-screen antialiased overflow-x-hidden;
   }
 
   html.light body {
@@ -23,7 +23,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #070a13;
+  background: #050816;
 }
 
 html.light ::-webkit-scrollbar-track {
@@ -39,24 +39,202 @@ html.light ::-webkit-scrollbar-track {
   background: #06b6d4;
 }
 
-/* Cyber Grid Background */
-.bg-grid-pattern {
-  background-size: 40px 40px;
+/* 3D Cyber Perspective Grid Plane */
+.cyber-perspective-grid {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(6, 182, 212, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(600px) rotateX(65deg);
+  transform-origin: 50% 100%;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+  animation: gridPerspectiveMove 20s linear infinite;
+  will-change: background-position;
 }
 
-html.light .bg-grid-pattern {
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+@keyframes gridPerspectiveMove {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 60px;
+  }
+}
+
+/* Static Cyber Grid Background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 /* Dot Pattern */
 .bg-dot-pattern {
   background-image: radial-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+/* Orb Floating Smooth Keyframe Animations */
+.orb-float-1 {
+  animation: orbFloat1 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.orb-float-2 {
+  animation: orbFloat2 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.orb-float-3 {
+  animation: orbFloat3 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.orb-float-4 {
+  animation: orbFloat4 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes orbFloat1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(80px, 60px, 0) scale(1.15);
+  }
+  100% {
+    transform: translate3d(-50px, 100px, 0) scale(0.95);
+  }
+}
+
+@keyframes orbFloat2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-70px, -50px, 0) scale(1.12);
+  }
+  100% {
+    transform: translate3d(40px, -80px, 0) scale(0.9);
+  }
+}
+
+@keyframes orbFloat3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(60px, -70px, 0) scale(1.18);
+  }
+  100% {
+    transform: translate3d(100px, 30px, 0) scale(0.92);
+  }
+}
+
+@keyframes orbFloat4 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-80px, 40px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-30px, -60px, 0) scale(0.96);
+  }
+}
+
+/* Floating Developer Code Badges Animation */
+.float-code-1 {
+  animation: floatCode1 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.float-code-2 {
+  animation: floatCode2 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.float-code-3 {
+  animation: floatCode3 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.float-code-4 {
+  animation: floatCode4 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes floatCode1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(30px, -40px, 0) rotate(1.5deg);
+  }
+  100% {
+    transform: translate3d(-20px, -80px, 0) rotate(-1deg);
+  }
+}
+
+@keyframes floatCode2 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-35px, 30px, 0) rotate(-1.5deg);
+  }
+  100% {
+    transform: translate3d(25px, -50px, 0) rotate(1deg);
+  }
+}
+
+@keyframes floatCode3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(40px, 35px, 0) rotate(1deg);
+  }
+  100% {
+    transform: translate3d(-30px, -40px, 0) rotate(-1.5deg);
+  }
+}
+
+@keyframes floatCode4 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-40px, -30px, 0) rotate(-1deg);
+  }
+  100% {
+    transform: translate3d(30px, 45px, 0) rotate(1.5deg);
+  }
+}
+
+/* Subtle Cyber Scan Line */
+.cyber-scan-line {
+  animation: cyberScan 14s ease-in-out infinite;
+  will-change: top, opacity;
+}
+
+@keyframes cyberScan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 
 /* Glassmorphism Styles */
@@ -126,10 +304,76 @@ html.light .text-gradient-cyan {
 
 /* Shimmer animation */
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
 }
 
 .animate-shimmer {
   animation: shimmer 2.5s infinite;
+}
+
+/* Holographic Rotating Rings Animations */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 35s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 45s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* Disable heavy animations on prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .cyber-perspective-grid,
+  .orb-float-1,
+  .orb-float-2,
+  .orb-float-3,
+  .orb-float-4,
+  .float-code-1,
+  .float-code-2,
+  .float-code-3,
+  .float-code-4,
+  .cyber-scan-line,
+  .animate-spin-slow,
+  .animate-spin-reverse,
+  .animate-pulse-glow {
+    animation: none !important;
+  }
 }

@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
-  GraduationCap, 
-  Code2, 
-  Cpu, 
-  Palette, 
-  Target, 
-  Sparkles, 
-  BookOpen, 
-  CheckCircle2 
+import {
+  GraduationCap,
+  Code2,
+  Cpu,
+  Palette,
+  Target,
+  Sparkles,
+  BookOpen,
+  CheckCircle2
 } from 'lucide-react';
 import { personalInfo, aboutData } from '../data/portfolioData';
 
@@ -25,7 +25,7 @@ export function About() {
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -40,7 +40,7 @@ export function About() {
 
         {/* Bio Text & Career Goal Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14 items-stretch">
-          
+
           {/* Main Bio Text */}
           <div className="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4 flex flex-col justify-between">
             <div className="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
@@ -48,7 +48,7 @@ export function About() {
                 <p key={index}>{p}</p>
               ))}
             </div>
-            
+
             <div className="pt-4 border-t border-white/5 flex flex-wrap items-center gap-4 text-xs font-mono text-cyan-300">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400" /> Bannari Amman Inst of Tech
