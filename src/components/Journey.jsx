@@ -1,6 +1,30 @@
 import React from 'react';
-import { Milestone, Calendar, CheckCircle2, Sparkles, Rocket, Compass } from 'lucide-react';
+import { 
+  Milestone, 
+  CheckCircle2, 
+  Sparkles, 
+  Rocket, 
+  Compass,
+  Code2,
+  Globe,
+  Layers,
+  Trophy,
+  Cpu,
+  Target
+} from 'lucide-react';
 import { journeyData } from '../data/portfolioData';
+
+const milestoneIcons = {
+  Code2,
+  Globe,
+  Layers,
+  Trophy,
+  Cpu,
+  Target,
+  Sparkles,
+  Rocket,
+  Compass
+};
 
 export function Journey() {
   return (
@@ -21,7 +45,7 @@ export function Journey() {
             My <span className="text-gradient">Journey</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
-            A timeline of my learning, projects, and technology growth.
+            A chronological timeline of my learning, projects, hackathon challenges, and technical aspirations.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
         </div>
@@ -29,64 +53,59 @@ export function Journey() {
         {/* Vertical Timeline Container */}
         <div className="relative max-w-4xl mx-auto">
           
-          {/* Central Vertical Glowing Line (hidden on small mobile, visible sm+) */}
-          <div className="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-cyan-500/50 via-blue-500/40 to-cyan-500/10 sm:-translate-x-1/2"></div>
+          {/* Central Vertical Glowing Line */}
+          <div className="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-cyan-500/60 via-blue-500/50 to-cyan-500/20 sm:-translate-x-1/2 shadow-[0_0_12px_rgba(6,182,212,0.3)]"></div>
 
           {/* Timeline Nodes */}
           <div className="space-y-12 sm:space-y-16">
             {journeyData.map((item, index) => {
               const isEven = index % 2 === 0;
+              const IconComponent = milestoneIcons[item.icon] || Compass;
 
               return (
                 <div
-                  key={item.year}
+                  key={item.title}
                   className={`relative flex flex-col sm:flex-row items-start ${
                     isEven ? 'sm:flex-row-reverse' : ''
                   } gap-6 sm:gap-12 group`}
                 >
                   {/* Timeline Center Node Dot */}
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-6 w-9 h-9 rounded-full bg-slate-950 border-2 border-cyan-400 flex items-center justify-center text-cyan-300 shadow-lg shadow-cyan-500/30 group-hover:scale-125 group-hover:border-cyan-300 transition-all duration-300 z-20">
-                    {index === 0 ? (
-                      <Compass className="w-4 h-4" />
-                    ) : index === 1 ? (
-                      <Sparkles className="w-4 h-4 text-cyan-300" />
-                    ) : (
-                      <Rocket className="w-4 h-4 text-blue-400" />
-                    )}
+                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-6 w-10 h-10 rounded-full bg-slate-950 border-2 border-cyan-400/80 flex items-center justify-center text-cyan-300 shadow-[0_0_18px_rgba(6,182,212,0.35)] group-hover:scale-125 group-hover:border-cyan-300 group-hover:bg-cyan-950/90 group-hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all duration-300 z-20">
+                    <IconComponent className="w-4 h-4" />
                   </div>
 
                   {/* Card Container (Half-width on desktop) */}
                   <div className="w-full sm:w-1/2 pl-12 sm:pl-0">
-                    <div className={`glass-card p-6 sm:p-7 rounded-2xl border border-white/10 hover:border-cyan-500/40 group-hover:shadow-xl group-hover:shadow-cyan-500/10 transition-all duration-300 ${
+                    <div className={`glass-card p-6 sm:p-7 rounded-2xl border border-white/10 hover:border-cyan-500/40 group-hover:shadow-2xl group-hover:shadow-cyan-500/10 transition-all duration-300 group-hover:-translate-y-1 ${
                       isEven ? 'sm:mr-6' : 'sm:ml-6'
                     }`}>
                       
-                      {/* Year & Status Badge */}
+                      {/* Year & Category Badge */}
                       <div className="flex items-center justify-between gap-3 mb-3">
                         <span className="text-xl sm:text-2xl font-black font-mono text-cyan-400 tracking-wider">
                           {item.year}
                         </span>
-                        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-medium">
+                        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-medium whitespace-nowrap">
                           {item.tag}
                         </span>
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-300/85 mb-4 leading-relaxed">
                         {item.description}
                       </p>
 
                       {/* Bullet Highlights */}
-                      <div className="space-y-2 pt-2 border-t border-white/5">
+                      <div className="space-y-2 pt-3 border-t border-white/5">
                         {item.points.map((point, pIdx) => (
-                          <div key={pIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-300">
+                          <div key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                             <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                            <span>{point}</span>
+                            <span className="leading-snug">{point}</span>
                           </div>
                         ))}
                       </div>
@@ -94,7 +113,7 @@ export function Journey() {
                     </div>
                   </div>
 
-                  {/* Empty Spacer on Opposite Side for balanced layout */}
+                  {/* Empty Spacer on Opposite Side for balanced desktop layout */}
                   <div className="hidden sm:block sm:w-1/2"></div>
                 </div>
               );

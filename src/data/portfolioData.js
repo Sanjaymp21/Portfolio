@@ -327,38 +327,79 @@ export const skillsData = [
 export const journeyData = [
   {
     year: "2025",
-    title: "Foundation & Problem Solving",
-    tag: "Milestone",
-    status: "Completed",
-    description: "Embarked on the software development journey with a deep dive into programming fundamentals and web architectures.",
+    title: "Programming Foundation",
+    tag: "Fundamentals",
+    icon: "Code2",
+    description: "Started my programming journey by learning core programming concepts and developing problem-solving skills.",
     points: [
-      "Started programming journey and established core logic in C and Python",
-      "Learned core data structures, algorithms, and computational problem solving",
-      "Explored foundational web technologies (HTML5, CSS3, JavaScript)"
+      "C Programming Fundamentals",
+      "Python Programming",
+      "Logical Thinking & Problem Solving"
+    ]
+  },
+  {
+    year: "2025 - 2026",
+    title: "Web Development Journey",
+    tag: "Web Engineering",
+    icon: "Globe",
+    description: "Explored modern web technologies and started creating responsive and user-friendly digital experiences.",
+    points: [
+      "HTML & Modern Semantic Structure",
+      "CSS & Responsive UI Styling",
+      "JavaScript & Dynamic Client Interactions",
+      "UI/UX Design & User-Centric Flows"
     ]
   },
   {
     year: "2026",
-    title: "Hackathons & Impactful Building",
-    tag: "Active Phase",
-    status: "In Progress",
-    description: "Actively transforming ideas into full-stack applications, AI integrations, and participating in hackathon challenges.",
+    title: "Building Real-World Projects",
+    tag: "Applied Software",
+    icon: "Layers",
+    description: "Converted ideas into practical software solutions by working on projects focused on real-world problems.",
     points: [
-      "Participated in innovation challenges and collaborative hackathons",
-      "Built projects using AI, web technologies, and software development (SST Groomers, PCDP V4, Recyclo-AI, EndoJourney AI)",
-      "Improved full-stack development skills across modern frontend and backend runtimes"
+      "SST Groomers — Pet grooming trust and booking platform",
+      "PCDP V4 — Secure digital attendance management system",
+      "Recyclo-AI — AI-powered e-waste management platform",
+      "EndoJourney AI — AI-powered supportive health companion"
     ]
   },
   {
-    year: "2027 - Future",
-    title: "Scalable Systems & Cloud Engineering",
-    tag: "Future Vision",
-    status: "Upcoming",
-    description: "Focusing on large-scale distributed architectures, cloud computing infrastructure, and impactful engineering leadership.",
+    year: "2026",
+    title: "Innovation & Challenges",
+    tag: "Hackathons",
+    icon: "Trophy",
+    description: "Participated in innovation challenges and hackathons to improve teamwork, technical skills, and solution-building ability.",
     points: [
-      "Explore advanced software engineering paradigms and system design",
-      "Learn cloud technologies, microservices, and scalable systems",
-      "Build impactful, production-grade real-world applications that solve societal challenges"
+      "Team Collaboration & Agile Brainstorming",
+      "Rapid Prototype Development",
+      "Real-World Problem Solving",
+      "Technical Presentation & Solution Pitching"
+    ]
+  },
+  {
+    year: "2026 - Present",
+    title: "Exploring AI & Data Technologies",
+    tag: "Advanced Tech",
+    icon: "Cpu",
+    description: "Expanding knowledge in artificial intelligence, machine learning, and big data analytics.",
+    points: [
+      "Artificial Intelligence & Agent Systems",
+      "Machine Learning & Predictive Modeling",
+      "Big Data Analytics & Data Pipelines",
+      "Cloud Technologies & Scalable Infrastructure"
+    ]
+  },
+  {
+    year: "Future Vision",
+    title: "Future Software Engineer",
+    tag: "Aspiration",
+    icon: "Target",
+    description: "Aspiring to become a skilled software developer by building scalable and impactful technology solutions.",
+    points: [
+      "Full Stack Development",
+      "Backend Engineering",
+      "System Design & Distributed Architecture",
+      "AI Engineering & Intelligent Systems"
     ]
   }
 ];
