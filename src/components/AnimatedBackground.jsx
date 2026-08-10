@@ -72,7 +72,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
     };
   }, [isMobile]);
 
-  // Digital Data Flow & Neural Space Simulation Canvas
+  // Digital Data Flow & Technology Constellation Canvas Simulation
   useEffect(() => {
     if (isMobile) return;
 
@@ -94,7 +94,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
       y: height / 2,
       targetX: width / 2,
       targetY: height / 2,
-      radius: 180,
+      radius: 190,
       active: false
     };
 
@@ -121,18 +121,11 @@ export function AnimatedBackground({ activeSection = 'home' }) {
     window.addEventListener('mouseleave', handleCanvasMouseLeave);
     window.addEventListener('resize', handleResize);
 
-    // 1. Network Nodes & Data Streams
-    const nodeCount = isLowPower ? 20 : 42;
+    // 1. Technology Constellation Nodes (React, Python, AI, Machine Learning, Big Data, Node.js, Cloud)
+    const techConstellationLabels = ['React', 'Python', 'AI', 'Machine Learning', 'Big Data', 'Node.js', 'Cloud', 'System Design'];
+    const nodeCount = isLowPower ? 22 : 44;
     let nodes = [];
     let dataPackets = [];
-
-    // 2. Orbiting Tech Nodes (AI, DB, Cloud, Code)
-    const orbits = [
-      { angle: 0, speed: 0.003, radiusX: 320, radiusY: 120, label: 'AI', color: '6, 182, 212' },
-      { angle: Math.PI * 0.5, speed: 0.0025, radiusX: 380, radiusY: 140, label: 'DB', color: '59, 130, 246' },
-      { angle: Math.PI, speed: 0.0035, radiusX: 280, radiusY: 100, label: 'Cloud', color: '168, 85, 247' },
-      { angle: Math.PI * 1.5, speed: 0.002, radiusX: 420, radiusY: 160, label: 'Dev', color: '16, 185, 129' }
-    ];
 
     const initNetwork = () => {
       nodes = [];
@@ -140,20 +133,23 @@ export function AnimatedBackground({ activeSection = 'home' }) {
 
       for (let i = 0; i < nodeCount; i++) {
         const depth = Math.random() * 0.7 + 0.5; // 0.5 (deep) to 1.2 (near)
+        const isTechNode = i < techConstellationLabels.length;
+
         nodes.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.3 * depth,
-          vy: (Math.random() - 0.5) * 0.3 * depth,
+          vx: (Math.random() - 0.5) * 0.25 * depth,
+          vy: (Math.random() - 0.5) * 0.25 * depth,
           depth,
-          radius: (Math.random() * 1.5 + 1.2) * depth,
+          radius: isTechNode ? (Math.random() * 1.5 + 2.5) * depth : (Math.random() * 1.5 + 1.1) * depth,
           pulse: Math.random() * Math.PI * 2,
           pulseSpeed: Math.random() * 0.02 + 0.01,
-          color: Math.random() > 0.4 ? '6, 182, 212' : (Math.random() > 0.5 ? '59, 130, 246' : '168, 85, 247')
+          label: isTechNode ? techConstellationLabels[i] : null,
+          color: isTechNode ? '6, 182, 212' : (Math.random() > 0.4 ? '6, 182, 212' : (Math.random() > 0.5 ? '59, 130, 246' : '168, 85, 247'))
         });
       }
 
-      // Initialize data flow packets that travel between connected nodes
+      // Data packets that travel between connected nodes
       for (let k = 0; k < (isLowPower ? 8 : 16); k++) {
         dataPackets.push({
           fromNode: Math.floor(Math.random() * nodeCount),
@@ -167,7 +163,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
 
     initNetwork();
 
-    const maxConnectionDistance = 145;
+    const maxConnectionDistance = 150;
     const maxConnectionDistSq = maxConnectionDistance * maxConnectionDistance;
     let lastTime = performance.now();
 
@@ -185,7 +181,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
       const cameraOffsetX = (mouse.x - width / 2) * 0.025;
       const cameraOffsetY = (mouse.y - height / 2) * 0.025;
 
-      // Update and draw network nodes
+      // Update node positions and natural cursor repulsion
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
 
@@ -194,12 +190,12 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         node.pulse += node.pulseSpeed;
 
         // Boundary wrap
-        if (node.x < -30) node.x = width + 30;
-        if (node.x > width + 30) node.x = -30;
-        if (node.y < -30) node.y = height + 30;
-        if (node.y > height + 30) node.y = -30;
+        if (node.x < -40) node.x = width + 40;
+        if (node.x > width + 40) node.x = -40;
+        if (node.y < -40) node.y = height + 40;
+        if (node.y > height + 40) node.y = -40;
 
-        // Natural cursor repulsion physics
+        // Cursor repulsion physics
         if (mouse.active) {
           const dx = node.x - mouse.x;
           const dy = node.y - mouse.y;
@@ -214,8 +210,8 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         }
       }
 
-      // Draw Synaptic Connection Lines
-      ctx.lineWidth = 0.7;
+      // Draw Synaptic Constellation Lines
+      ctx.lineWidth = 0.75;
       for (let i = 0; i < nodes.length; i++) {
         const nodeA = nodes[i];
         const renderAX = nodeA.x - cameraOffsetX * nodeA.depth;
@@ -229,7 +225,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
 
           if (distSq < maxConnectionDistSq) {
             const dist = Math.sqrt(distSq);
-            const alpha = (1 - dist / maxConnectionDistance) * 0.2 * ((nodeA.depth + nodeB.depth) / 2);
+            const alpha = (1 - dist / maxConnectionDistance) * 0.22 * ((nodeA.depth + nodeB.depth) / 2);
 
             const renderBX = nodeB.x - cameraOffsetX * nodeB.depth;
             const renderBY = nodeB.y - cameraOffsetY * nodeB.depth;
@@ -243,7 +239,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         }
       }
 
-      // Update and Draw Data Flow Packets (Light pulses traveling along pathways)
+      // Update and Draw Data Flow Packets
       for (let k = 0; k < dataPackets.length; k++) {
         const packet = dataPackets[k];
         const nodeA = nodes[packet.fromNode];
@@ -255,7 +251,6 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         const dy = nodeA.y - nodeB.y;
         const distSq = dx * dx + dy * dy;
 
-        // If nodes are close enough to be connected
         if (distSq < maxConnectionDistSq) {
           packet.progress += packet.speed * 60 * delta;
           if (packet.progress >= 1) {
@@ -267,7 +262,6 @@ export function AnimatedBackground({ activeSection = 'home' }) {
           const curX = nodeA.x + (nodeB.x - nodeA.x) * packet.progress - cameraOffsetX * nodeA.depth;
           const curY = nodeA.y + (nodeB.y - nodeA.y) * packet.progress - cameraOffsetY * nodeA.depth;
 
-          // Packet glow dot
           ctx.beginPath();
           ctx.arc(curX, curY, 2.2, 0, Math.PI * 2);
           ctx.fillStyle = packet.color;
@@ -276,14 +270,14 @@ export function AnimatedBackground({ activeSection = 'home' }) {
           ctx.fill();
           ctx.shadowBlur = 0;
         } else {
-          // If nodes separated, pick new connected targets
           packet.fromNode = Math.floor(Math.random() * nodeCount);
           packet.toNode = Math.floor(Math.random() * nodeCount);
           packet.progress = 0;
         }
       }
 
-      // Draw Nodes
+      // Draw Constellation Nodes & Tech Labels
+      ctx.font = '10px monospace';
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
         const renderX = node.x - cameraOffsetX * node.depth;
@@ -292,13 +286,13 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         const pulseAlpha = 0.35 + Math.sin(node.pulse) * 0.2;
         const nodeAlpha = Math.max(0.1, Math.min(0.75, pulseAlpha * node.depth));
 
-        // Outer glow
+        // Node Glow Ring
         ctx.beginPath();
         ctx.arc(renderX, renderY, node.radius * 2, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${node.color}, ${nodeAlpha * 0.2})`;
         ctx.fill();
 
-        // Core dot
+        // Node Core Dot
         ctx.beginPath();
         ctx.arc(renderX, renderY, node.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${node.color}, ${nodeAlpha})`;
@@ -306,27 +300,13 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         ctx.shadowBlur = 7;
         ctx.fill();
         ctx.shadowBlur = 0;
+
+        // Technology Constellation Label (for key nodes)
+        if (node.label && nodeAlpha > 0.3) {
+          ctx.fillStyle = `rgba(165, 243, 252, ${nodeAlpha * 0.75})`;
+          ctx.fillText(node.label, renderX + node.radius + 6, renderY + 3);
+        }
       }
-
-      // Draw 3D Orbiting Technology Nodes in Upper Space
-      const orbitCenterX = width * 0.5 - cameraOffsetX * 0.5;
-      const orbitCenterY = height * 0.28 - cameraOffsetY * 0.5;
-
-      orbits.forEach((orbit) => {
-        orbit.angle += orbit.speed * 60 * delta;
-        const orbX = orbitCenterX + Math.cos(orbit.angle) * orbit.radiusX;
-        const orbY = orbitCenterY + Math.sin(orbit.angle) * orbit.radiusY;
-        const orbDepth = (Math.sin(orbit.angle) + 1.2) * 0.5; // Depth factor 0.1 to 1.1
-
-        // Orbit Trail Node
-        ctx.beginPath();
-        ctx.arc(orbX, orbY, 3.5 * orbDepth, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${orbit.color}, ${0.5 * orbDepth})`;
-        ctx.shadowColor = `rgba(${orbit.color}, 0.8)`;
-        ctx.shadowBlur = 10;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-      });
 
       animationFrameId = requestAnimationFrame(render);
     };
@@ -438,7 +418,7 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         }}
       ></div>
 
-      {/* 5. Neural Network & Digital Data Flow Canvas Simulation */}
+      {/* 5. Technology Constellation & Neural Canvas Simulation */}
       {!isMobile && (
         <canvas
           ref={canvasRef}
@@ -446,76 +426,10 @@ export function AnimatedBackground({ activeSection = 'home' }) {
         />
       )}
 
-      {/* 6. Floating Abstract Developer Workspace Elements (Layered Depth) */}
-      {!isMobile && (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
-          
-          {/* Card 1: React Component Blueprint (Top Left) */}
-          <div 
-            className="absolute top-[16%] left-[6%] float-code-1 opacity-20 hover:opacity-45 transition-all duration-300"
-            style={{ transform: `translate3d(${mouseOffset.x * -15}px, ${mouseOffset.y * -15}px, 0)` }}
-          >
-            <div className="p-3 rounded-xl bg-slate-950/70 border border-cyan-500/25 shadow-[0_0_20px_rgba(6,182,212,0.12)] backdrop-blur-md font-mono text-[11px] text-cyan-300 space-y-1">
-              <div className="flex items-center gap-1.5 text-cyan-400 text-[10px] pb-1 border-b border-white/5 font-semibold">
-                <Code2 className="w-3 h-3" />
-                <span>Component.tsx</span>
-              </div>
-              <div className="text-slate-400">&lt;<span className="text-cyan-300">SoftwareEngineer</span></div>
-              <div className="pl-3 text-blue-300">stack=<span className="text-emerald-300">&#123;["AI", "React", "Python"]&#125;</span></div>
-              <div className="text-slate-400">/&gt;</div>
-            </div>
-          </div>
-
-          {/* Card 2: Terminal Stream (Mid Right) */}
-          <div 
-            className="absolute top-[36%] right-[8%] float-code-2 opacity-20 hover:opacity-45 transition-all duration-300"
-            style={{ transform: `translate3d(${mouseOffset.x * -35}px, ${mouseOffset.y * -35}px, 0)` }}
-          >
-            <div className="p-3 rounded-xl bg-slate-950/70 border border-blue-500/25 shadow-[0_0_20px_rgba(59,130,246,0.12)] backdrop-blur-md font-mono text-[11px] space-y-1">
-              <div className="flex items-center gap-1.5 text-blue-400 text-[10px] pb-1 border-b border-white/5 font-semibold">
-                <Terminal className="w-3 h-3" />
-                <span>neural_kernel.sh</span>
-              </div>
-              <div className="text-slate-300">$ model.compile(<span className="text-cyan-300">optimizer='adam'</span>)</div>
-              <div className="text-emerald-400 text-[10px]">✓ Tensor cores active: 100%</div>
-            </div>
-          </div>
-
-          {/* Card 3: Database & Vector Schema (Lower Left) */}
-          <div 
-            className="absolute top-[60%] left-[8%] float-code-3 opacity-20 hover:opacity-45 transition-all duration-300"
-            style={{ transform: `translate3d(${mouseOffset.x * -20}px, ${mouseOffset.y * -20}px, 0)` }}
-          >
-            <div className="p-3 rounded-xl bg-slate-950/70 border border-purple-500/25 shadow-[0_0_20px_rgba(168,85,247,0.12)] backdrop-blur-md font-mono text-[11px] space-y-1">
-              <div className="flex items-center gap-1.5 text-purple-400 text-[10px] pb-1 border-b border-white/5 font-semibold">
-                <Database className="w-3 h-3" />
-                <span>vector_db.json</span>
-              </div>
-              <div className="text-slate-400">&#123; <span className="text-purple-300">"dimensions"</span>: 1536, <span className="text-purple-300">"status"</span>: <span className="text-emerald-400">"indexed"</span> &#125;</div>
-            </div>
-          </div>
-
-          {/* Card 4: Cloud Architecture Node (Lower Right) */}
-          <div 
-            className="absolute top-[82%] right-[12%] float-code-4 opacity-20 hover:opacity-45 transition-all duration-300"
-            style={{ transform: `translate3d(${mouseOffset.x * -30}px, ${mouseOffset.y * -30}px, 0)` }}
-          >
-            <div className="p-3 rounded-xl bg-slate-950/70 border border-cyan-500/25 shadow-[0_0_20px_rgba(6,182,212,0.12)] backdrop-blur-md font-mono text-[11px] space-y-1">
-              <div className="flex items-center gap-1.5 text-cyan-400 text-[10px] pb-1 border-b border-white/5 font-semibold">
-                <Cloud className="w-3 h-3" />
-                <span>distributed_system</span>
-              </div>
-              <div className="text-slate-300">cluster.scale(<span className="text-cyan-300">replicas=3</span>) <span className="text-emerald-400">⚡ Live</span></div>
-            </div>
-          </div>
-
-        </div>
-      )}
-
-      {/* 7. Section Vignette & Cyber Contrast Vignette */}
+      {/* 6. Section Vignette & Cyber Contrast Vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#03050d_95%)] opacity-85"></div>
 
-      {/* 8. Subtle Non-Intrusive Cyber Scanner Beam */}
+      {/* 7. Subtle Non-Intrusive Cyber Scanner Beam */}
       <div className="absolute inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/15 to-transparent cyber-scan-line"></div>
     </div>
   );
