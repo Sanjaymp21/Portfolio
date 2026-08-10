@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useActiveSection } from './hooks/useActiveSection';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import { SystemBootLoader } from './components/SystemBootLoader';
-import { AIBadgeOrb } from './components/AIBadgeOrb';
-import { FloatingTerminalWidget } from './components/FloatingTerminalWidget';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -83,9 +81,6 @@ export function App() {
       {/* 2. High-End Immersive AI Developer Digital Universe Background */}
       <AnimatedBackground activeSection={activeSection} />
 
-      {/* 3. Floating AI Explorer Identity Element */}
-      <AIBadgeOrb />
-
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Navigation Bar */}
         <Navbar
@@ -115,7 +110,6 @@ export function App() {
 
         {/* Floating Utilities */}
         <ScrollToTop />
-        <FloatingTerminalWidget />
 
         {/* Project Detail Modal */}
         {selectedProject && (
