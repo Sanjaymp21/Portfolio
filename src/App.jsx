@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useActiveSection } from './hooks/useActiveSection';
 import { AnimatedBackground } from './components/AnimatedBackground';
-import { SystemBootLoader } from './components/SystemBootLoader';
+import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -25,13 +25,13 @@ import { NotFound } from './components/NotFound';
 
 export function App() {
   const [is404, setIs404] = useState(false);
-  const [isBooting, setIsBooting] = useState(() => {
-    return !sessionStorage.getItem('sanjay_booted');
+  const [isLoading, setIsLoading] = useState(() => {
+    return !sessionStorage.getItem('sanjay_visited');
   });
 
-  const handleBootComplete = () => {
-    sessionStorage.setItem('sanjay_booted', 'true');
-    setIsBooting(false);
+  const handleLoadingComplete = () => {
+    sessionStorage.setItem('sanjay_visited', 'true');
+    setIsLoading(false);
   };
 
   // Check URL pathname for 404 testing or unknown path
@@ -75,8 +75,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#03050c] text-slate-100 relative selection:bg-cyan-500 selection:text-black overflow-x-hidden">
-      {/* 1. Fast Optional AI System Boot Sequence */}
-      {isBooting && <SystemBootLoader onComplete={handleBootComplete} />}
+      {/* 1. Premium Full-Screen Loading Experience (Initial Load Only) */}
+      {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
 
       {/* 2. High-End Immersive AI Developer Digital Universe Background */}
       <AnimatedBackground activeSection={activeSection} />
