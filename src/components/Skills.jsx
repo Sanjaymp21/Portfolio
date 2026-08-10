@@ -187,35 +187,41 @@ export function Skills() {
               </div>
 
               {/* Exploring Cards Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
                 {currentlyExploringData.map((item) => (
                   <div
                     key={item.name}
-                    className="p-5 rounded-2xl bg-slate-950/70 border border-white/10 hover:border-cyan-500/40 hover:bg-slate-900/90 transition-all duration-300 group flex flex-col justify-between"
+                    className="p-5 sm:p-6 rounded-2xl bg-slate-950/70 border border-white/10 hover:border-cyan-500/40 hover:bg-slate-900/90 transition-all duration-300 group flex flex-col justify-between h-full shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1"
                   >
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                    <div className="space-y-3.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/40 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
                           <TechIcon name={item.iconKey} className="w-5 h-5" />
                         </div>
-                        <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                        <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-medium whitespace-nowrap">
                           {item.tag}
                         </span>
                       </div>
 
                       <div>
-                        <h4 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
                           {item.name}
                         </h4>
-                        <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
                           {item.description}
                         </p>
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-mono text-emerald-400">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>Active Focus</span>
+                    <div className="mt-5 pt-3.5 border-t border-white/5 flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 font-medium">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span>{item.status || "Active Focus"}</span>
+                      </div>
+                      <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Continuous Growth</span>
                     </div>
                   </div>
                 ))}

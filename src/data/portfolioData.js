@@ -368,37 +368,50 @@ export const currentlyExploringData = [
     name: "Artificial Intelligence",
     description: "Deep learning concepts, LLM architectures, and intelligent agent integrations",
     iconKey: "artificial intelligence",
-    tag: "AI Systems"
+    tag: "AI Systems",
+    status: "Active Focus"
   },
   {
     name: "Machine Learning",
-    description: "Predictive analytics, statistical models, and data-driven intelligence",
+    description: "Learning machine learning algorithms, predictive models, data preprocessing, and intelligent systems for solving real-world problems.",
     iconKey: "machine learning",
-    tag: "Data Science"
+    tag: "AI & Data Science",
+    status: "Active Focus"
+  },
+  {
+    name: "Big Data Analytics",
+    description: "Exploring large-scale data processing, analytics workflows, data visualization, and technologies used to extract meaningful insights from complex datasets.",
+    iconKey: "big data analytics",
+    tag: "Data Engineering",
+    status: "Active Focus"
   },
   {
     name: "Cloud Computing",
     description: "AWS cloud architecture, containerization, and serverless infrastructure",
     iconKey: "cloud",
-    tag: "Cloud & DevOps"
+    tag: "Cloud & DevOps",
+    status: "Active Focus"
   },
   {
     name: "Advanced Full Stack Development",
     description: "Full-stack Next.js applications, server components, and reactive architectures",
     iconKey: "react",
-    tag: "Full Stack"
+    tag: "Full Stack",
+    status: "Active Focus"
   },
   {
     name: "Backend Architecture",
     description: "High-throughput APIs, event-driven queues, and microservices patterns",
-    iconKey: "node.js",
-    tag: "Backend"
+    iconKey: "backend",
+    tag: "Backend Engineering",
+    status: "Active Focus"
   },
   {
     name: "System Design",
     description: "Distributed caching, database partitioning, and high-availability design",
-    iconKey: "go",
-    tag: "Scalability"
+    iconKey: "system design",
+    tag: "Scalability",
+    status: "Active Focus"
   }
 ];
 

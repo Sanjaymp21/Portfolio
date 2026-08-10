@@ -97,10 +97,48 @@ export function TechIcon({ name, className = "w-6 h-6" }) {
     case 'ml':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="6" cy="6" r="3" />
-          <circle cx="18" cy="6" r="3" />
-          <circle cx="12" cy="18" r="3" />
-          <path d="M8.5 7.5l5 7M15.5 7.5l-5 7M9 6h6" />
+          <circle cx="6" cy="6" r="2.5" />
+          <circle cx="18" cy="6" r="2.5" />
+          <circle cx="6" cy="18" r="2.5" />
+          <circle cx="18" cy="18" r="2.5" />
+          <circle cx="12" cy="12" r="2.5" />
+          <path d="m7.8 7.8 2.4 2.4m3.6 3.6 2.4 2.4m0-8.4-2.4 2.4m-3.6 3.6-2.4 2.4" />
+        </svg>
+      );
+    case 'big data analytics':
+    case 'big data':
+    case 'data analytics':
+    case 'data engineering':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+          <path d="M3 12v7c0 1.66 4.03 3 9 3s9-1.34 9-3v-7" />
+          <path d="M12 9.5v3.5M8 11v2M16 10v3" />
+        </svg>
+      );
+    case 'system design':
+    case 'distributed systems':
+    case 'scalability':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="6" height="6" x="2" y="3" rx="1" />
+          <rect width="6" height="6" x="16" y="3" rx="1" />
+          <rect width="6" height="6" x="9" y="15" rx="1" />
+          <path d="M5 9v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9" />
+          <path d="M12 12v3" />
+        </svg>
+      );
+    case 'backend architecture':
+    case 'backend':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="20" height="8" x="2" y="3" rx="2" />
+          <rect width="20" height="8" x="2" y="13" rx="2" />
+          <line x1="6" x2="6.01" y1="7" y2="7" />
+          <line x1="6" x2="6.01" y1="17" y2="17" />
+          <line x1="10" x2="14" y1="7" y2="7" />
+          <line x1="10" x2="14" y1="17" y2="17" />
         </svg>
       );
     case 'ui/ux design':
