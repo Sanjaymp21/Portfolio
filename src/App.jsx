@@ -25,12 +25,9 @@ import { NotFound } from './components/NotFound';
 
 export function App() {
   const [is404, setIs404] = useState(false);
-  const [isLoading, setIsLoading] = useState(() => {
-    return !sessionStorage.getItem('sanjay_visited');
-  });
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleLoadingComplete = () => {
-    sessionStorage.setItem('sanjay_visited', 'true');
     setIsLoading(false);
   };
 
