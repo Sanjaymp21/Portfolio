@@ -5,7 +5,7 @@ import { personalInfo } from '../data/portfolioData';
 export function ResumeCTA({ onNotify }) {
   const handleDownload = () => {
     if (onNotify) {
-      onNotify("Downloading Sanjay-M-Resume.pdf");
+      onNotify("Opening resume...");
     }
   };
 
@@ -111,7 +111,8 @@ export function ResumeCTA({ onNotify }) {
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <a
                   href={personalInfo.resumePath}
-                  download="Sanjay-M-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={handleDownload}
                   className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-400 hover:from-cyan-300 hover:to-blue-300 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all text-sm"
                 >

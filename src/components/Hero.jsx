@@ -14,7 +14,7 @@ import { personalInfo } from '../data/portfolioData';
 export function Hero({ onNotify }) {
   const handleResumeClick = () => {
     if (onNotify) {
-      onNotify("Resume download initiated!");
+      onNotify("Opening resume...");
     }
   };
 
@@ -104,7 +104,8 @@ export function Hero({ onNotify }) {
             {/* Secondary: Download Resume */}
             <a
               href={personalInfo.resumePath}
-              download="Sanjay-M-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleResumeClick}
               aria-label="Download Sanjay M's Resume"
               className="inline-flex items-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-slate-200 glass-card border border-white/10 hover:border-cyan-500/50 hover:text-white hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-black/20 hover:shadow-cyan-500/10 transition-all duration-200 text-sm sm:text-base cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400"
